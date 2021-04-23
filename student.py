@@ -8,7 +8,7 @@ root = Tk()
 
 def insert_data(name, age, address):
     connection = psycopg2.connect(dbname="postgres", user="postgres",
-                                  password="Agarwal@6475", host="localhost", port="5432")
+                                  password="EnterYourPassword", host="localhost", port="5432")
     cursor = connection.cursor()
     sql = '''Insert into student (NAME, AGE, ADDRESS) values (%s, %s, %s);'''
     cursor.execute(sql, (name, age, address))
